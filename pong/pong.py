@@ -76,19 +76,25 @@ while running:
     if ball_x == player_b_x - 15 and player_b_y< ball_y < player_b_y + 100:
         ball_x_inc = -(ball_x_inc)
     
-    if ball_x < 0:
+    if ball_x < -10:
         player_b_score += 1
         ball_x = 400
         ball_y = 300
         ball_x_inc = -(ball_x_inc)
         ball_y_inc = random.choice([-1, 1])
+        player_a_y = 250
+        player_b_y = 250
+        pygame.time.delay(500)
     
-    if ball_x > 800:
+    if ball_x > 810:
         player_a_score += 1
         ball_x = 400
         ball_y = 300
         ball_x_inc = -(ball_x_inc)
         ball_y_inc = random.choice([-1, 1])
+        player_a_y = 250
+        player_b_y = 250
+        pygame.time.delay(500)
 
 
     ball_x += ball_x_inc
