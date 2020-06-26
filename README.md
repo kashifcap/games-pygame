@@ -11,6 +11,10 @@ use UP and DOWN arrow keys to control player on right
 
 use LEFT and RIGHT arrow keys to control your spaceship and use space to fire bullets
 
+# snake game
+
+use arrow keys to control snake
+
 # tic-tac-toe
 
 your are X
