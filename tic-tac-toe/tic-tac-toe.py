@@ -163,7 +163,7 @@ if __name__ == '__main__':
 	computer = 'x'
 
 	#turn = random.choice(['o', 'x'])
-	turn = 'x'
+	turn = 'o'
 
 	board = [['0', '0', '0'],
 			 ['0', '0', '0'],
@@ -188,6 +188,8 @@ if __name__ == '__main__':
 
 		if game_status:
 
+			screendraw(screen, board)
+
 			if turn == 'o':
 				position = minmaxutil(board)
 				board[position[0]][position[1]] = 'o'
@@ -210,14 +212,12 @@ if __name__ == '__main__':
 					row = 2
 				else:
 					row = None
-				print
+				
 				if row != None and col != None and board[row][col] == '0':
 					board[row][col] = 'x'
 					turn = 'o'
 				
 
-
-			screendraw(screen, board)
 
 			if win(board, 'x'):
 				game_status = False
