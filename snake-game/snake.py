@@ -35,22 +35,22 @@ class snake(object):
             keys = pygame.key.get_pressed()
 
             for key in keys:
-                if keys[pygame.K_LEFT]:
+                if keys[pygame.K_LEFT] and self.dirx != 1:
                     self.dirx = -1
                     self.diry = 0
                     self.turns[self.head.pos[:]] = [self.dirx, self.diry]
 
-                elif keys[pygame.K_RIGHT]:
+                elif keys[pygame.K_RIGHT] and self.dirx != -1:
                     self.dirx = 1
                     self.diry = 0
                     self.turns[self.head.pos[:]] = [self.dirx, self.diry]
 
-                elif keys[pygame.K_UP]:
+                elif keys[pygame.K_UP] and self.diry != 1:
                     self.dirx = 0
                     self.diry = -1
                     self.turns[self.head.pos[:]] = [self.dirx, self.diry]
 
-                elif keys[pygame.K_DOWN]:
+                elif keys[pygame.K_DOWN] and self.diry != -1:
                     self.dirx = 0
                     self.diry = 1
                     self.turns[self.head.pos[:]] = [self.dirx, self.diry]
